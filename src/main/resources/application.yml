@@ -1,5 +1,5 @@
 server:
-    port: 8080
+    port: 80
     use-forward-headers: true
     undertow:
         io-threads: 2
@@ -65,7 +65,7 @@ logging:
 
 # site.options.theme: [default|classic]
 site:
-    version: 3.5.0
+    version: 1.0.0
     location: ${user.dir}
     controls:
         # 注册开关
@@ -78,8 +78,8 @@ site:
         comment: true
     options:
         theme: classic
-        site_logo: /dist/images/logo/logo.png
-        site_favicon: /dist/images/logo/m.png
+        site_logo: /dist/images/logo/mariobin_logo.png
+        site_favicon: /dist/images/logo/favicon.png
         storage_max_width: 800
         storage_limit_size: 2
         editor: markdown

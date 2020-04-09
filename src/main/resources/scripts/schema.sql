@@ -52,7 +52,7 @@ CREATE TABLE `mto_options` (
 -- ----------------------------
 -- Records of mto_options
 -- ----------------------------
-INSERT INTO `mto_options` VALUES ('1', 'site_name', '0', 'Mtons');
+INSERT INTO `mto_options` VALUES ('1', 'site_name', '0', 'MarioBin');
 INSERT INTO `mto_options` VALUES ('2', 'site_domain', '0', 'http://mtons.com');
 INSERT INTO `mto_options` VALUES ('3', 'site_keywords', '0', 'mtons,博客,社区');
 INSERT INTO `mto_options` VALUES ('4', 'site_description', '0', 'Mtons, 做一个有内涵的技术社区');
@@ -96,7 +96,7 @@ CREATE TABLE `mto_user` (
 -- ----------------------------
 -- Records of mto_user
 -- ----------------------------
-INSERT INTO `mto_user` VALUES ('1', 'admin', '小豆丁', 'https://en.gravatar.com/userimage/154673030/b9a54b5b990a61cc074668b2e2a0b8c0.png', 'example@mtons.com', '3TGCQF25BLHU9R7IQUITN0FCC5', '0', '2017-08-06 17:52:41', '2017-07-26 11:08:36', '2017-10-17 13:24:13', '0', '1', '0', '0', '');
+INSERT INTO `mto_user` VALUES ('1', 'admin', '小牙刷', 'https://en.gravatar.com/userimage/183606930/a0373224e009442a22a45cefcf81564a.jpg', 'example@mtons.com', '3TGCQF25BLHU9R7IQUITN0FCC5', '0', '2017-08-06 17:52:41', '2017-07-26 11:08:36', '2017-10-17 13:24:13', '0', '1', '0', '0', '');
 
 -- ----------------------------
 -- Table structure for mto_user_oauth

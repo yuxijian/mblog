@@ -48,7 +48,7 @@
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">标签(用逗号或空格分隔)</h3>
+                    <h3 class="panel-title">标签(用逗号分隔)</h3>
                 </div>
                 <div class="panel-body">
                     <input type="text" id="tags" name="tags" class="form-control" value="${view.tags}" placeholder="添加相关标签，逗号分隔 (最多4个)">

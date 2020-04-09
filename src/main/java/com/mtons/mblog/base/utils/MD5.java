@@ -11,6 +11,7 @@ package com.mtons.mblog.base.utils;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -67,6 +68,31 @@ public class MD5 {
 		}
 		BigInteger bi = new BigInteger(code);
 		return bi.abs().toString(32).toUpperCase();
+	}
+
+
+	public static String hex(byte[] array) {
+		StringBuffer sb = new StringBuffer();
+		for (int i = 0; i < array.length; ++i) {
+			sb.append(Integer.toHexString((array[i] & 0xFF) | 0x100).substring(1,3));
+		}
+		return sb.toString();
+	}
+
+	/**
+	 * https://en.gravatar.com/
+	 * hash登录gravatar.com的邮件地址，获取对应邮件的头像
+	 * @param message
+	 * @return
+	 */
+	public static String md5Hex (String message) {
+		try {
+			MessageDigest md = MessageDigest.getInstance("MD5");
+			return hex (md.digest(message.getBytes("CP1252")));
+		} catch (NoSuchAlgorithmException e) {
+		} catch (UnsupportedEncodingException e) {
+		}
+		return null;
 	}
 
 }

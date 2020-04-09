@@ -34,10 +34,9 @@ public class FilePathUtils {
 
 	/**
 	 * 生成路径和文件名
-	 * 以当前时间开头加4位随机数的文件名
 	 *
 	 * @param originalFilename 原始文件名
-	 * @return 10位长度文件名+文件后缀
+	 * @return 10位长度文件名(文件字节的md5字符串)+文件后缀
 	 */
 	public static String wholePathName(String originalFilename, String key) {
 		StringBuilder builder = new StringBuilder(52);

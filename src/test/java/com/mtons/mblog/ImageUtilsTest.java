@@ -23,6 +23,7 @@ public class ImageUtilsTest {
 //        FileKit.writeByteArrayToFile(bytes, "F:/data/test_out.jpg");
 
         byte[] bytes = ImageUtils.download("https://images.gitee.com/uploads/images/2019/0125/142627_fcd67bfd_116277.jpeg");
+//        byte[] bytes = ImageUtils.download("https://avatars3.githubusercontent.com/u/41604934?v=4");
         System.out.println(bytes);
     }
 

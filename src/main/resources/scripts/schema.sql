@@ -156,6 +156,8 @@ INSERT INTO `shiro_permission` VALUES ('17', '删除角色', 'role:delete', '15'
 INSERT INTO `shiro_permission` VALUES ('18', '主题管理', 'theme:index', '0', '0', '0');
 INSERT INTO `shiro_permission` VALUES ('19', '系统配置', 'options:index', '0', '0', '0');
 INSERT INTO `shiro_permission` VALUES ('20', '修改配置', 'options:update', '19', '0', '0');
+INSERT INTO `shiro_permission` VALUES ('21', '前台管理', 'front', '0', '0', '0');
+INSERT INTO `shiro_permission` VALUES ('22', '写文章', 'front:post:create', '21', '0', '0');
 
 -- ----------------------------
 -- Table structure for shiro_role
@@ -173,6 +175,7 @@ CREATE TABLE `shiro_role` (
 -- Records of shiro_role
 -- ----------------------------
 INSERT INTO `shiro_role` VALUES ('1', null, 'admin', '0');
+INSERT INTO `shiro_role` VALUES ('2', null, 'user', '0');
 
 -- ----------------------------
 -- Table structure for shiro_role_permission
@@ -208,6 +211,8 @@ INSERT INTO `shiro_role_permission` VALUES ('17', '17', '1');
 INSERT INTO `shiro_role_permission` VALUES ('18', '18', '1');
 INSERT INTO `shiro_role_permission` VALUES ('19', '19', '1');
 INSERT INTO `shiro_role_permission` VALUES ('20', '20', '1');
+INSERT INTO `shiro_role_permission` VALUES ('21', '21', '1');
+INSERT INTO `shiro_role_permission` VALUES ('22', '22', '1');
 -- ----------------------------
 -- Table structure for shiro_user_role
 -- ----------------------------

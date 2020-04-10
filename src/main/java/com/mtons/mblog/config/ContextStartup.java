@@ -75,7 +75,7 @@ public class ContextStartup implements ApplicationRunner, ServletContextAware {
 
         Map<String, String> map = siteOptions.getOptions();
         options.forEach(opt -> {
-            if (StringUtils.isNoneBlank(opt.getKey(), opt.getValue())) {
+            if (StringUtils.isNoneBlank(opt.getKey())) {
                 map.put(opt.getKey(), opt.getValue());
             }
         });

@@ -258,7 +258,6 @@ public class CallbackController extends BaseController {
         String username = userService.get(thirdToken.getUserId()).getUsername();
         return login(username, thirdToken.getAccessToken());
 
-
     }
 
     /**
@@ -355,6 +354,7 @@ public class CallbackController extends BaseController {
 
                 // 将远程图片下载到本地
                 String ava100 = Consts.avatarPath + getAvaPath(u.getId(), 100);
+                log.info("openOauth.getAvatar():{}",openOauth.getAvatar());
                 byte[] bytes = ImageUtils.download(openOauth.getAvatar());
                 String imagePath = storageFactory.get().writeToStore(bytes, ava100);
                 userService.updateAvatar(u.getId(), imagePath);

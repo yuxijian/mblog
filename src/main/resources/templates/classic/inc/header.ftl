@@ -103,11 +103,13 @@
                     </li>
 
 				<#if profile??>
+                    <#if postCreate?? && postCreate == true>
                     <@controls name="post">
                         <li>
                             <a href="${base}/post/editing" class="plus"><i class="icon icon-note"></i> 写文章</a>
                         </li>
                     </@controls>
+                    </#if>
                     <li class="dropdown">
                         <a href="#" class="user dropdown-toggle" data-toggle="dropdown">
                             <img class="img-circle" src="<@resource src=profile.avatar + '?t=' + .now?time />">

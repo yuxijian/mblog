@@ -3,6 +3,7 @@ package com.mtons.mblog.shiro;
 import com.mtons.mblog.base.lang.Consts;
 import com.mtons.mblog.modules.data.AccountProfile;
 import com.mtons.mblog.modules.data.UserVO;
+import com.mtons.mblog.modules.entity.Permission;
 import com.mtons.mblog.modules.entity.Role;
 import com.mtons.mblog.modules.service.UserRoleService;
 import com.mtons.mblog.modules.service.UserService;
@@ -17,6 +18,8 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class AccountRealm extends AuthorizingRealm {
     @Autowired
@@ -67,6 +70,12 @@ public class AccountRealm extends AuthorizingRealm {
         SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(profile, token.getCredentials(), getName());
         Session session = SecurityUtils.getSubject().getSession();
         session.setAttribute("profile", profile);
+
+        List<Role> roles = userRoleService.listRoles(profile.getId());
+        Optional<String> optional = roles.stream().map(Role::getPermissions)
+                .flatMap(d -> d.stream().map(Permission::getName).filter(name -> "front:post:create".equals(name))).findFirst();
+        optional.ifPresent(d -> session.setAttribute("postCreate", true));
+
         return info;
     }
 

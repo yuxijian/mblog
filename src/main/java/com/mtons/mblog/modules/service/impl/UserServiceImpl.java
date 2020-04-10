@@ -80,6 +80,7 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public AccountProfile login(String username, String password) {
         User po = userRepository.findByUsername(username);
+//        roleRepository.findAllByStatus()
 
         if (null == po) {
             return null;

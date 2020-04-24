@@ -65,7 +65,7 @@
                         </div>
                         <div class="form-group">
                             <label>标签</label>
-                            <input type="text" name="tags" data-role="tagsinput" class="form-control" value="${view.tags}" placeholder="添加相关标签，逗号分隔 (最多4个)">
+                            <input type="text" name="tags" data-role="tagsinput" class="form-control" value="${view.tags}" placeholder="标签逗号分隔 (最多4个)">
                         </div>
                     </div>
                     <div class="box-footer">

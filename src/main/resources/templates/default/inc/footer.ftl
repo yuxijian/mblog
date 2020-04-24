@@ -11,7 +11,7 @@
             <div class="gh-foot-min-back hidden-xs hidden-sm">
                 <!-- 请保留此处标识-->
 <#--                <span class="footer-nav-item">Powered by <a href="https://github.com/langhsu/mblog" target="_blank">mblog</a></span>-->
-                <span class="footer-nav-item">这世界很酷！</span>
+                <span class="footer-nav-item">新世界来的像梦一样！</span>
             </div>
         </div>
     </div>

@@ -54,6 +54,24 @@
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
     seajs.use('markdown');
+    <#--var localUserId = [[${view.authorId}]];-->
+    <#--var storage = window.localStorage;-->
+    <#--var localContent = storage.getItem(localUserId+ "post_content");-->
+    <#--if(localContent){-->
+    <#--    $("#content").val(localContent);-->
+    <#--}-->
+
+    <#--$(function() {-->
+
+    <#--    $("#content").on("input", function (e) {-->
+    <#--        alert("111")-->
+    <#--        storage.setItem(localUserId + "post_content", $("#content").val());-->
+    <#--    });-->
+    <#--    $("#content").bind("input propertychange",function(event) {-->
+    <#--        alert("222")-->
+    <#--    });-->
+    <#--});-->
 </script>

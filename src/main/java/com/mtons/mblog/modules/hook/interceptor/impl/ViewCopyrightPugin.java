@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author Beldon 2015/10/31
+ * 文章尾部添加copyright
  */
 @Component
 public class ViewCopyrightPugin extends InterceptorHookSupport {

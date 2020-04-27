@@ -54,6 +54,24 @@
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
+    var localUserId = [[${view.authorId}]];
+    var storage = window.localStorage;
+    var localContent = storage.getItem(localUserId+ "post_content");
+    if(localContent){
+        $("#content").val(localContent);
+    }
     seajs.use('markdown');
+
+    $(function() {
+
+        $("#content").on("input", function (e) {
+            alert("111")
+            storage.setItem(localUserId + "post_content", $("#content").val());
+        });
+        $("#content").bind("input propertychange",function(event) {
+            alert("222")
+        });
+    });
 </script>

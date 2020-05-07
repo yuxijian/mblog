@@ -208,6 +208,13 @@
 			<version>${qiniu.sdk.version}</version>
 		</dependency>
 
+        <!-- 第三方登录类库 -->
+		<dependency>
+			<groupId>me.zhyd.oauth</groupId>
+			<artifactId>JustAuth</artifactId>
+			<version>1.14.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>

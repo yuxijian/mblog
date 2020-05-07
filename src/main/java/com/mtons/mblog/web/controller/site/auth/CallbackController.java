@@ -355,9 +355,12 @@ public class CallbackController extends BaseController {
                 // 将远程图片下载到本地
                 String ava100 = Consts.avatarPath + getAvaPath(u.getId(), 100);
                 log.info("openOauth.getAvatar():{}",openOauth.getAvatar());
-                byte[] bytes = ImageUtils.download(openOauth.getAvatar());
-                String imagePath = storageFactory.get().writeToStore(bytes, ava100);
-                userService.updateAvatar(u.getId(), imagePath);
+
+                //阿里云访问第三方图片地址网络环境不稳定，图片不存文件服务器，直接返回第三方图片路径
+//                byte[] bytes = ImageUtils.download(openOauth.getAvatar());
+//                String imagePath = storageFactory.get().writeToStore(bytes, ava100);
+//                userService.updateAvatar(u.getId(), imagePath);
+                userService.updateAvatar(u.getId(), openOauth.getAvatar());
 
                 thirdToken = new OpenOauthVO();
                 BeanUtils.copyProperties(openOauth, thirdToken);

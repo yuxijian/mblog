@@ -112,7 +112,7 @@
                     </#if>
                     <li class="dropdown">
                         <a href="#" class="user dropdown-toggle" data-toggle="dropdown">
-                            <img class="img-circle" src="<@resource src=profile.avatar + '?t=' + .now?time />">
+                            <img class="img-circle" src="<@resource src=profile.avatar + '?t=' + .now?time?string.short />">
                             <span>${profile.name}</span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
